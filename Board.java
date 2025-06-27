@@ -21,14 +21,14 @@ public class Board extends Frame{
     }
 
     protected static boolean checkWinner(){
-        //cek vertical and horizontal
+        //vertical check
         for (int i = 0; i < 3; i++) {
             if ( Board.board[0][i] != '*' && ((Board.board[0][i] == Board.board[1][i]) && (Board.board[0][i] == Board.board[2][i]))) return true;
 
             if (Board.board[i][0] != '*' && ((Board.board[i][0] == Board.board[i][1]) && (Board.board[i][0] == Board.board[i][2]))) return true;
         }
         
-        //cek diagonal
+        //diagonal check
         if (Board.board[0][0] != '*' && ((Board.board[0][0] == Board.board[1][1]) && (Board.board[0][0] == Board.board[2][2])))return true;
         if (Board.board[0][2] != '*' && ((Board.board[0][2] == Board.board[1][1]) && (Board.board[0][2] == Board.board[2][0]))) return true;
 
