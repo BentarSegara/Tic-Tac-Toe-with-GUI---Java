@@ -1,9 +1,8 @@
-package components;
 import java.awt.LayoutManager;
 
 import javax.swing.BoxLayout;
 
-import guitools.Frame;
+import guicomponents.Frame;
 
 public class Board extends Frame{
     protected static char[][] board = Board.boardInit();
