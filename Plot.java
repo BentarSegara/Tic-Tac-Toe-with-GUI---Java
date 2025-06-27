@@ -1,4 +1,3 @@
-package components;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -6,8 +5,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 
-import guitools.Frame;
-import guitools.Label;
+import guicomponents.Frame;
+import guicomponents.Label;
 
 public class Plot extends Frame implements MouseListener{   
     private int rowAddress = 0;
@@ -49,10 +48,6 @@ public class Plot extends Frame implements MouseListener{
                 this.symbolLabel.setText("O");
                 Board.board[this.rowAddress][this.colAddress] = 'O';
             }
-
-            // for (int i = 0; i < 3; i++) {
-            //     System.err.println(Arrays.toString(Board.board[i]));
-            // }
             
             if (Board.filledPlot == 9 && !Board.checkWinner()) {
                 MainWindow.confirm = MainWindow.drawNotif.showNotif();
